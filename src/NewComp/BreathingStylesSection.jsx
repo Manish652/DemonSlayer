@@ -8,7 +8,7 @@ const DemonSlayerExplorer = () => {
   return (
     <section id="breathing-Style" className="py-20 relative overflow-hidden min-h-screen bg-gradient-to-b from-gray-900 to-black">
       {/* Background with increased opacity */}
-      <div className="absolute inset-0 bg-[url('image/demon.png')] bg-cover bg-center opacity-40"></div>
+      <div className="absolute inset-0 bg-[url('k.jpg')] bg-cover bg-center opacity-40"></div>
       
       {/* Dynamic particles */}
       {/* <div className="absolute inset-0 overflow-hidden">
@@ -46,7 +46,7 @@ const DemonSlayerExplorer = () => {
         animate={{ opacity: [0, 1, 0], scale: [0.8, 1.5, 2.5] }}
         transition={{ duration: 3, ease: "easeInOut", delay: 0.5 }}
       >
-        <img src="https://i.pinimg.com/474x/39/1c/de/391cde740cad97676a59dd73fb84e942.jpg" alt="Demon Slayer Logo" className="w-96 opacity-60" />
+        <img src="k.jpg" alt="Demon Slayer Logo" className="w-96 opacity-60" />
       </motion.div>
       
       <div className="max-w-6xl mx-auto px-4 relative z-10">

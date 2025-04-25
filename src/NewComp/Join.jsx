@@ -62,7 +62,7 @@ function Join() {
         <motion.div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: "url('https://w.wallhaven.cc/full/8o/wallhaven-8o6521.png')",
+            backgroundImage: "url('e.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             filter: "brightness(0.2)"

@@ -12,9 +12,13 @@ import Blood from "./NewComp/Blood";
 import Nav from "./NewComp/Nav";
 import BreathingStylesSection from './NewComp/BreathingStylesSection'
 import Join from "./NewComp/Join";
+import FullPageLoader from './components/FullPageLoader';
+import './customCursor.css';
+
 function DemonSlayerLanding(){
   const [scrollY, setScrollY] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,8 +37,20 @@ function DemonSlayerLanding(){
     }
   }, [mobileMenuOpen]);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 4000); // 4 seconds loader
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <FullPageLoader />;
+  }
+
   return (
-    <div className="bg-black text-white min-h-screen overflow-x-hidden font-sans">
+    <div className="bg-black text-white min-h-screen overflow-x-hidden font-sans custom-cursor">
       <style dangerouslySetInnerHTML={{ __html: customStyles }} />
       
       <motion.header 

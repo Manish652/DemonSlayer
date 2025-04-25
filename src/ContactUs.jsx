@@ -5,6 +5,7 @@ const ContactSection = () => {
     <div className="bg-gradient-to-br from-gray-900 to-black text-white min-h-screen w-full">
       <div className="container mx-auto px-6 py-16 min-h-screen flex items-center justify-center">
         <main className="flex flex-col md:flex-row w-full max-w-7xl bg-gray-800/30 backdrop-blur-lg rounded-3xl overflow-hidden shadow-2xl border border-gray-700/50">
+          
           {/* Left Section */}
           <section className="w-full md:w-2/5 bg-gradient-to-br from-blue-900/50 to-indigo-900/50 p-8 md:p-12">
             <div className="mb-10">
@@ -64,20 +65,26 @@ const ContactSection = () => {
             </div>
           </section>
 
-          {/* Right Section - Spline 3D Element Holder */}
-          <section className="w-full md:w-3/5 relative min-h-[500px] md:min-h-[600px] bg-gradient-to-br from-gray-800/50 to-gray-900/50 flex items-center justify-center overflow-hidden">
+          {/* Right Section - Spline 3D Element Holder with background image */}
+          <section
+            className="w-full md:w-3/5 relative min-h-[500px] md:min-h-[600px] bg-cover bg-center flex items-center justify-center overflow-hidden"
+            style={{ backgroundImage: "url('/public/e.jpg')" }} // Replace with your image
+          >
+            {/* Dark overlay */}
+            <div className="absolute inset-0 bg-gray-900/60 z-0"></div>
+
             {/* Animated background elements */}
-            <div className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0 opacity-20 z-0">
               <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/30 rounded-full filter blur-3xl animate-pulse"></div>
               <div className="absolute bottom-1/3 right-1/3 w-96 h-96 bg-indigo-500/20 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
             </div>
             
-            {/* This empty div will hold the Spline 3D element */}
+            {/* Spline 3D Element Holder */}
             <div id="spline-container" className="w-full h-full absolute inset-0 z-10">
-              {/* Spline will be added here */}
+              {/* Add Spline viewer here */}
             </div>
             
-            {/* Placeholder text that can be removed when Spline is added */}
+            {/* Placeholder text */}
             <div className="text-center text-blue-300/50 absolute z-0 pointer-events-none">
               <div className="text-xl font-light mb-4">3D Spline Element</div>
               <div className="text-sm">Your immersive 3D experience will appear here</div>
