@@ -62,7 +62,7 @@ function Join() {
         <motion.div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: "url('e.jpg')",
+            backgroundImage: "url('p.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             filter: "brightness(0.2)"
